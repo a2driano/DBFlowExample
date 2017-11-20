@@ -26,7 +26,7 @@ public class Company extends BaseModel {
 
     private List<Worker> mWorkerList;
 
-// error
+// error!
 
 //    @OneToMany(methods = OneToMany.Method.ALL, variableName = "mWorkerList")
 //    public List<Worker> getMWorkerList() {
