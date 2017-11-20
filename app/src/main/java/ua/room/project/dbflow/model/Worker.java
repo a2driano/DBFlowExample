@@ -1,8 +1,10 @@
 package ua.room.project.dbflow.model;
 
+import com.raizlabs.android.dbflow.annotation.Column;
 import com.raizlabs.android.dbflow.annotation.ForeignKey;
 import com.raizlabs.android.dbflow.annotation.PrimaryKey;
 import com.raizlabs.android.dbflow.annotation.Table;
+import com.raizlabs.android.dbflow.structure.BaseModel;
 
 import ua.room.project.dbflow.data.AppDataBase;
 
@@ -10,27 +12,39 @@ import ua.room.project.dbflow.data.AppDataBase;
  * Created by kunde on 15.11.2017.
  */
 @Table(database = AppDataBase.class)
-public class Worker {
+public class Worker extends BaseModel {
+
     @PrimaryKey(autoincrement = true)
+    @Column
     private long id;
+
+    @Column
     private String mName;
+
+    @Column
     private String mPhone;
+
+    @Column
     private long mDataBirth;
+
+    @ForeignKey(saveForeignKeyModel = true)
     private Company mCompany;
 
-    public String getmPhone() {
+
+
+    public String getMPhone() {
         return mPhone;
     }
 
-    public void setmPhone(String mPhone) {
+    public void setMPhone(String mPhone) {
         this.mPhone = mPhone;
     }
 
-    public long getmDataBirth() {
+    public long getMDataBirth() {
         return mDataBirth;
     }
 
-    public void setmDataBirth(long mDataBirth) {
+    public void setMDataBirth(long mDataBirth) {
         this.mDataBirth = mDataBirth;
     }
 
@@ -42,19 +56,27 @@ public class Worker {
         this.id = id;
     }
 
-    public String getmName() {
+    public String getMName() {
         return mName;
     }
 
-    public void setmName(String mName) {
+    public void setMName(String mName) {
         this.mName = mName;
     }
 
-    public Company getmCompany() {
+    public Company getMCompany() {
         return mCompany;
     }
 
-    public void setmCompany(Company mCompany) {
+    public void setMCompany(Company mCompany) {
         this.mCompany = mCompany;
+    }
+
+    @Override
+    public String toString() {
+        return id + " "
+        + mName + " " +
+        mCompany.toString() + " " +
+        mPhone;
     }
 }

@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DBFlow.iml" filepath="$PROJECT_DIR$/DBFlow.iml" />
+      <module fileurl="file://C:\AndroidAPP\DBFlowExample\DBFlow.iml" filepath="C:\AndroidAPP\DBFlowExample\DBFlow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/DBFlowExample.iml" filepath="$PROJECT_DIR$/.idea/DBFlowExample.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\AndroidAPP\DBFlowExample\app\app.iml" filepath="C:\AndroidAPP\DBFlowExample\app\app.iml" />
     </modules>
   </component>
 </project>

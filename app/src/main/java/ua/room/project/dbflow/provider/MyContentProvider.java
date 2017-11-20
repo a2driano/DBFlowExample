@@ -22,7 +22,7 @@ public class MyContentProvider extends ContentProvider {
     public static final int DATA_BASE_NUMBER = 1;
     public static final String TABLE_WORKER_NAME = "worker_table";
 
-    public static final String AUTHORIRIES = "ua.room.project.dbflow";
+    public static final String AUTHORITIES = "ua.room.project.dbflow";
 
     public static final String WORKER_ID = "worker_id";
     public static final String WORKER_NAME = "worker_name";
@@ -33,15 +33,15 @@ public class MyContentProvider extends ContentProvider {
     public static final String WORKER_PATH = "workers";
 
     public static final Uri WORKER_CONTENT_URI = Uri.parse("content://"
-            + AUTHORIRIES + "/" + WORKER_PATH);
+            + AUTHORITIES + "/" + WORKER_PATH);
 
     // набор строк
     static final String WORKER_CONTENT_TYPE = "vnd.android.cursor.dir/vnd."
-            + AUTHORIRIES + "." + WORKER_PATH;
+            + AUTHORITIES + "." + WORKER_PATH;
 
     // одна строка
     static final String WORKER_CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd."
-            + AUTHORIRIES + "." + WORKER_PATH;
+            + AUTHORITIES + "." + WORKER_PATH;
 
     public static final int URI_WORKERS = 1;
     public static final int URI_WORKERS_ID = 2;
@@ -50,8 +50,8 @@ public class MyContentProvider extends ContentProvider {
 
     static {
         uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
-        uriMatcher.addURI(AUTHORIRIES, WORKER_PATH, URI_WORKERS);
-        uriMatcher.addURI(AUTHORIRIES, WORKER_PATH + "/#", URI_WORKERS_ID);
+        uriMatcher.addURI(AUTHORITIES, WORKER_PATH, URI_WORKERS);
+        uriMatcher.addURI(AUTHORITIES, WORKER_PATH + "/#", URI_WORKERS_ID);
     }
 
     public static final String DB_CREATE = "create table " + TABLE_WORKER_NAME + "("
